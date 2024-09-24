@@ -7,4 +7,5 @@ export const Container = styled(SafeAreaView)`
   padding: 24px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 `
