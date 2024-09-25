@@ -7,7 +7,7 @@ export const defaultTheme = {
     GREEN_MID: '#CBE4B4',
     GREEN_DARK: '#639339',
 
-    RED_LIGHT: '#F3BABD',
+    RED_LIGHT: '#F4E6E7',
     RED_MID: '#F3BABD',
     RED_DARK: '#BF3B44',
 
