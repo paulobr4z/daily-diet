@@ -1,21 +1,18 @@
-import { useState } from 'react'
-import { Select } from '../../components/Select'
+import { useNavigation } from '@react-navigation/native'
 import * as S from './styles'
 
-import { Text } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
 
 export function Home() {
-  const [selectedValue, setSelectedValue] = useState<string | null>(null)
-
-  const handleSelect = (value: string) => {
-    setSelectedValue(value)
-  }
+  const navigation = useNavigation()
 
   return (
     <S.Container>
-      <Text>{selectedValue}</Text>
+      <Text>Home</Text>
 
-      <Select onSelect={handleSelect} />
+      <TouchableOpacity onPress={() => navigation.navigate('statistics')}>
+        <Text>Go to Estatísticas</Text>
+      </TouchableOpacity>
     </S.Container>
   )
 }

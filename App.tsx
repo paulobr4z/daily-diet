@@ -9,7 +9,7 @@ import {
 
 import { defaultTheme } from './src/theme'
 
-import { Home } from './src/screens/Home'
+import { Routes } from './src/routes'
 import { Loading } from './src/components/Loading'
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
     <ThemeProvider theme={defaultTheme}>
       <StatusBar style="auto" />
       {fontsLoaded
-        ? <Home />
+        ? <Routes />
         : <Loading />}
     </ThemeProvider>
   )
