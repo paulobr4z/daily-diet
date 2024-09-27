@@ -1,10 +1,12 @@
-import { Text } from 'react-native'
 import * as S from './styles'
+
+import Logo from '../../assets/logo.svg'
 
 export function HeaderHome() {
   return (
     <S.Container>
-      <Text>HeaderHome</Text>
+      <Logo />
+      <S.Avatar source={{ uri: 'https://github.com/paulobr4z.png' }} />
     </S.Container>
   )
 }

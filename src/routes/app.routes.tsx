@@ -24,9 +24,9 @@ const { Navigator, Screen } = createStackNavigator()
 export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="feedback" component={Feedback} />
-
       <Screen name="home" component={Home} />
+
+      <Screen name="feedback" component={Feedback} />
 
       <Screen name="register" component={Register} />
 
