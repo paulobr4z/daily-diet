@@ -3,7 +3,10 @@ import {
   StackNavigationProp,
 } from '@react-navigation/stack'
 
+import { Feedback } from '../screens/Feedback'
 import { Home } from '../screens/Home'
+import { Register } from '../screens/Register'
+import { Snack } from '../screens/Snack'
 import { Statistics } from '../screens/Statistics'
 
 type AppRoutesProps = {
@@ -21,7 +24,13 @@ const { Navigator, Screen } = createStackNavigator()
 export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="Home" component={Home} />
+      <Screen name="feedback" component={Feedback} />
+
+      <Screen name="home" component={Home} />
+
+      <Screen name="register" component={Register} />
+
+      <Screen name="snack" component={Snack} />
 
       <Screen name="statistics" component={Statistics} />
     </Navigator>
