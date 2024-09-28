@@ -10,13 +10,15 @@ import { Snack } from '../screens/Snack'
 import { Statistics } from '../screens/Statistics'
 
 type AppRoutesProps = {
-  feedback: undefined;
+  feedback: {
+    type: 'positive' | 'negative'
+  }
   home: undefined;
   register: undefined;
   snack: undefined;
   statistics: {
     type: 'positive' | 'negative' | 'neutral'
-  };
+  }
 }
 
 export type AppNavigatorRoutesProps = StackNavigationProp<AppRoutesProps>
@@ -26,11 +28,11 @@ const { Navigator, Screen } = createStackNavigator()
 export function AppRoutes() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen name="home" component={Home} />
+      <Screen name="register" component={Register} />
 
       <Screen name="feedback" component={Feedback} />
 
-      <Screen name="register" component={Register} />
+      <Screen name="home" component={Home} />
 
       <Screen name="snack" component={Snack} />
 
