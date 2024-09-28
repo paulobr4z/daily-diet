@@ -1,6 +1,5 @@
 import * as S from './styles'
 
-// import { AppNavigatorRoutesProps } from '../../routes/app.routes'
 import { HeaderHome } from '../../components/HeaderHome'
 import { Percentage } from '../../components/Percentage'
 import { Button } from '../../components/Button'
@@ -11,8 +10,9 @@ import { useState } from 'react'
 import { HistoryByDayDTO } from '../../dtos'
 
 export function Home() {
-  // const navigation = useNavigation<AppNavigatorRoutesProps>()
-  const [history] = useState<HistoryByDayDTO[]>(historyData)
+  const [history] = useState<HistoryByDayDTO[]>(
+    historyData as HistoryByDayDTO[],
+  )
 
   return (
     <S.Container>
@@ -26,13 +26,9 @@ export function Home() {
       <SectionList
         sections={history}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <HistoryCard data={item} />
-        )}
+        renderItem={({ item }) => <HistoryCard data={item} />}
         renderSectionHeader={({ section }) => (
-          <S.SectionListTitle>
-            {section.title}
-          </S.SectionListTitle>
+          <S.SectionListTitle>{section.title}</S.SectionListTitle>
         )}
         style={{ marginTop: 16, marginBottom: 8 }}
         contentContainerStyle={

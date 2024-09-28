@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components/native'
 
 import ArrowUpRightGreen from '../../assets/arrow-up-right-green.svg'
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   position: relative;
   align-items: center;
   justify-content: center;

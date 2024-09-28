@@ -14,7 +14,9 @@ type AppRoutesProps = {
   home: undefined;
   register: undefined;
   snack: undefined;
-  statistics: undefined;
+  statistics: {
+    type: 'positive' | 'negative' | 'neutral'
+  };
 }
 
 export type AppNavigatorRoutesProps = StackNavigationProp<AppRoutesProps>
